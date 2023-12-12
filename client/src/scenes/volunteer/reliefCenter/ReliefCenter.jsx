@@ -135,7 +135,7 @@ function ReliefCenter() {
           />
         </Box>
         <Typography variant="h6" color="initial" sx={{ mb: 1 }}>
-               Location of all rescue centers
+               Location of all  rescue centers
         </Typography>
       <Grid container spacing={2}>
           <Grid item xs={14}>
