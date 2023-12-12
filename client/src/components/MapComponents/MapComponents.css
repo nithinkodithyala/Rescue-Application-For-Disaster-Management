@@ -10,22 +10,24 @@
 }
 
 #showMarkersButton {
-  display: block;
-  margin: 20px auto; /* Adjust the margin as needed */
-  width: 120px; /* Set the width and height to create a circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  width: 120px;
   height: 120px;
-  line-height: 120px; /* Center text vertically */
+  line-height: 1; /* Reset line-height */
   font-size: 16px;
   color: #fff;
-  background-color: #ff0000; /* Red color */
+  background-color: #ff0000;
   border: none;
-  border-radius: 50%; /* Border-radius 50% creates a circle */
+  border-radius: 50%;
   cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 12px rgba(0, 0, 0, 0.2); /* Circle shadow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 #showMarkersButton:hover {
-  background-color: #cc0000; /* Darker red on hover */
+  background-color: #cc0000;
 }
 
 

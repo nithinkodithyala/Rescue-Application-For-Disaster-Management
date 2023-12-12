@@ -36,7 +36,7 @@ const mainNavItems = [
     link: "/register",
   },
   {
-    title: "do&donts",
+    title: "do's & dont's",
     link: "/do&donts",
   },
 ];
@@ -155,7 +155,7 @@ function DrawerAppBar(props) {
               component="div"
               sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
             >
-              Disaster Management
+              Co-Rescue App
             </Typography>
             <Box sx={{ display: { xs: "none", sm: "block" } }}>
               {currentNavItems.map((item, val) => (
