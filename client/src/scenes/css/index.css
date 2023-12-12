@@ -1,0 +1,8 @@
+:root {
+  --background-color: #e7eaf69c;
+  --primary-color: #abb2e7;
+  --darker-primary-color: #8a92ce;
+  --accent-color: #3a438b;
+  --link-color: #192533;
+  --box-shadow: 7px 3px 15px rgb(0, 0, 0, 0.2);
+}

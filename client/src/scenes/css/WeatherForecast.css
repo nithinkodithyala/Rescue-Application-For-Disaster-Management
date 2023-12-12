@@ -1,0 +1,40 @@
+.WeatherForecast {
+  text-align: center;
+  justify-content: center;
+  margin: 18px 0 25px;
+}
+
+.WeatherForecast-elem {
+  margin-top: 18px;
+}
+
+@media screen and (min-width: 576px) {
+  .WeatherForecast {
+    margin-top: 22px;
+  }
+
+  .WeatherForecast-elem {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .WeatherForecast {
+    margin-top: 24px;
+  }
+
+  .WeatherForecast-elem {
+    margin-top: 33px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .WeatherForecast {
+    margin-top: 15px;
+    margin-bottom: 30px;
+  }
+
+  .WeatherForecast-elem {
+    margin-top: 33px;
+  }
+}

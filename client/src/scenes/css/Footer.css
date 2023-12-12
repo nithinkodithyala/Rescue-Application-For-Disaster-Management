@@ -1,0 +1,23 @@
+footer {
+  font-family: monospace;
+  font-size: 9px;
+  text-align: center;
+  margin-top: 3px;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--link-color);
+  transition: color 200ms ease-in-out;
+}
+
+footer a:hover {
+  color: var(--link-color);
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 768px) {
+  footer {
+    font-size: 10px;
+  }
+}

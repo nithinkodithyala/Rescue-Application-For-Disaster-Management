@@ -1,0 +1,153 @@
+.WeatherData {
+  flex-direction: column-reverse;
+  margin-top: 30px;
+}
+
+.weather-icon-elem {
+  text-align: center;
+}
+
+.weather-info {
+  text-align: center;
+  margin-top: 8px;
+  padding-left: 0;
+  padding-right: 25px;
+}
+
+.weather-description {
+  text-transform: capitalize;
+}
+
+.more-info-weather {
+  font-size: 13.5px;
+  line-height: 1.6;
+  text-align: center;
+  margin-top: 18px;
+}
+
+.more-info-weather span:last-child {
+  margin-left: 20px;
+}
+
+.location {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.city {
+  font-size: 25px;
+}
+
+.last-updated {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+@media screen and (min-width: 576px) {
+  .WeatherData {
+    margin-top: 40px;
+  }
+
+  .weather-info {
+    margin-top: 5px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .more-info-weather {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+
+  .more-info-weather span:last-child {
+    margin-left: 120px;
+  }
+
+  .city {
+    font-size: 33px;
+  }
+
+  .last-updated {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .weather-icon-elem canvas {
+    width: 100px;
+    height: 100px;
+  }
+
+  .weather-description {
+    font-size: 18px;
+  }
+
+  .more-info-weather {
+    font-size: 16px;
+    margin-top: 15px;
+  }
+
+  .location {
+    margin-bottom: 25px;
+  }
+
+  .city {
+    font-size: 38px;
+  }
+
+  .last-updated {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .WeatherData {
+    flex-direction: row;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .weather-icon-elem {
+    padding-left: 0;
+  }
+
+  .weather-icon-elem canvas {
+    width: 90px;
+    height: 90px;
+  }
+
+  .weather-info {
+    text-align: left;
+    padding-right: 0;
+    margin-top: 5px;
+  }
+
+  .weather-description {
+    font-size: 16px;
+  }
+
+  .more-info-weather {
+    font-size: 13px;
+    text-align: start;
+    padding-left: 18px;
+    margin-top: 5px;
+  }
+
+  .more-info-weather span:last-child {
+    margin-left: 0;
+  }
+
+  .location {
+    text-align: right;
+    padding-right: 0;
+  }
+
+  .city {
+    margin-top: 8px;
+    line-height: 1;
+  }
+
+  .last-updated {
+    margin-top: 8px;
+  }
+}

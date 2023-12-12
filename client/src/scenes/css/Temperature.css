@@ -1,0 +1,55 @@
+.Temperature {
+  font-size: 36px;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.units {
+  position: relative;
+  bottom: 16px;
+  right: 5px;
+  font-size: 15px;
+}
+
+.active {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+.Temperature a {
+  text-decoration: none;
+  color: var(--accent-color);
+}
+
+@media screen and (min-width: 576px) {
+  .Temperature {
+    font-size: 45px;
+  }
+
+  .units {
+    font-size: 17px;
+    bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .Temperature {
+    font-size: 52px;
+  }
+
+  .units {
+    bottom: 24px;
+    right: 7px;
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .Temperature {
+    font-size: 45px;
+  }
+
+  .units {
+    font-size: 14px;
+  }
+}

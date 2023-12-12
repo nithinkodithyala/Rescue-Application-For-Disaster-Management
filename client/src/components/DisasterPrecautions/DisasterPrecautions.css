@@ -1,0 +1,108 @@
+/* src/components/DisasterPrecautions.css */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #e6f7ff; /* Light blue background */
+    margin: 0;
+    overflow-x: hidden;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 50px auto; /* Improved margins for centering */
+    padding: 40px;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s forwards;
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  h1 {
+    color: #4285f4; /* Google Blue */
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem; /* Adjusted font size */
+    text-decoration: underline; /* Underline text */
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  button {
+    margin: 15px;
+    padding: 18px 35px;
+    font-size: 1.2rem; /* Adjusted font size */
+    font-weight: bold;
+    background-color: #4285f4;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #255ab3;
+  }
+  
+  .precautions {
+    opacity: 0;
+    margin-top: 30px;
+    padding: 25px;
+    background-color: #f9f9f9; /* Light gray background */
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.5s ease;
+  }
+  
+  .precautions.active {
+    opacity: 1;
+  }
+  
+  h2 {
+    color: #4285f4;
+    margin-bottom: 20px;
+    font-size: 1.8rem; /* Adjusted font size */
+    text-decoration: underline; /* Underline text */
+  }
+  
+  p {
+    font-weight: bold;
+    font-style: italic; /* Italic text */
+    margin-bottom: 10px;
+    font-size: 1.2rem; /* Adjusted font size */
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  ul li {
+    margin-bottom: 10px;
+    color: #555;
+    font-weight: bold;
+    font-style: italic; /* Italic text */
+    font-size: 1.2rem; /* Adjusted font size */
+  }
+  
+  /* Page transition animation */
+  .page-exit-active {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.5s, transform 0.5s;
+  }
