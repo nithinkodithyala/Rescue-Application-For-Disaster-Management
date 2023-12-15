@@ -3,6 +3,7 @@ import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import './MapComponents.css'; // Import your CSS file for styling
 // import Chatbot from './chat.js';
+// import EventEmitter from './EventEmitter'; // Import the event emitter
 
 const getNearestMarkers = (currentLatitude,currentLongitude,limit,userData) => {
   const staticMarkers = userData.map((user) => ({
@@ -64,7 +65,7 @@ const MapComponent = () => {
         const updatedUserData = data.map((user) => ({
           name: user.CenterName,
           latitude: user.latitude,
-          longitude: user.longitude,
+          longitude: user.longitude, 
         }));
         const updatedmailData = data.map((user) => ({
           name: user.CenterName,
@@ -111,6 +112,7 @@ const MapComponent = () => {
               findNearestMarkers(latitude, longitude, 5);
               console.log(mail, userData);
               sendEmailsToServer(mail, latitude, longitude);
+
             });
           },
           (error) => {
@@ -175,6 +177,7 @@ const MapComponent = () => {
     };
     // Call the function to show the present location and set up the button event listener
     showPresentLocation();
+    
     // return () => {
     //   document.getElementById('showMarkersButton').removeEventListener('click', () => {});
     // };

@@ -33,8 +33,8 @@ app.use("/user", userRoutes);
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: 'kodithyalanithin153@gmail.com',
-    pass: 'cluz qexp phhi ggjs',
+    user: 'corescue6@gmail.com',
+    pass: 'auiv ffqa cwwp haqu',
   },
 });
 
@@ -47,7 +47,7 @@ app.post('/api/send-emails', async (req, res) => {
     // Assuming emailData is an array of email objects
     const emailPromises = emailData.map(async (email) => {
       const mailOptions = {
-        from: 'kodithyalanithin153@gmail.com',
+        from: 'corescue6@gmail.com',
         to: email.email, // Use the email field from your data
         subject: 'Alrert',
         html: `Emergency at ${latitude} ${longitude}`,

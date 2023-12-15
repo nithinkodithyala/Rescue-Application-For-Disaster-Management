@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {  useEffect } from 'react';
 import { Box, Container } from '@mui/system'
 import { DataGrid } from '@mui/x-data-grid';
 import { Button, Fade, Grid, Modal, Stack, Typography } from '@mui/material';
@@ -7,7 +7,7 @@ import uuid from "react-uuid";
 import { useState } from 'react';
 import axios from 'axios'
 import Maps from './Maps.js';
-
+// import EventEmitter from '../../../components/MapComponents/EventEmitter.js';
 
 function ReliefCenter() {
 
@@ -111,21 +111,12 @@ function ReliefCenter() {
     
     <Box sx={{ mt: 5 }}>
       <Container>
-      {/* <Typography variant="h6" color="initial" sx={{ mb: 1 }}>
-               Location of all rescue centers
-        </Typography>
-      <Grid container spacing={2}>
-          <Grid item xs={14}>
-            <Maps></Maps>
-          </Grid>
-        </Grid> */}
-        
         <Stack container direction='row' alignItems="center" justifyContent="space-between" sx={{ mb: 3 }}>
           <Typography variant="h5" color="initial">Releif Center</Typography>
           {/* <Button variant="outlined" onClick={handleOpen}>Add Center</Button> */}
         </Stack>
         
-        <Box sx={{ height: '80vh', maxHeight: '70vh', width: '90vw' }}>
+        <Box sx={{ height: '80vh', maxHeight: '70vh', width: '80vw' }}>
           <DataGrid
             rows={rows}
             columns={columns}
@@ -143,7 +134,6 @@ function ReliefCenter() {
           </Grid>
         </Grid>
       </Container>
-      {/* <Maprelif></Maprelif> */}
 
 
       {/* modal */}

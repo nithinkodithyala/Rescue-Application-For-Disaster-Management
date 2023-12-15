@@ -5,7 +5,7 @@ const DisasterPrecautions = () => {
   const [selectedDisaster, setSelectedDisaster] = useState("cyclone");
 
   const handleButtonClick = (disasterType) => {
-    setSelectedDisaster(disasterType);
+    setSelectedDisaster(selectedDisaster === disasterType ? null : disasterType);
   };
 
   const disasterPrecautions = {
@@ -111,48 +111,37 @@ const DisasterPrecautions = () => {
     },
   };
 
-  const renderPrecautions = () => {
-    if (!selectedDisaster) {
-      return null; // Don't render anything if no disaster is selected
-    }
+  const renderAccordionItem = (disasterType) => {
+    const { do: dos, dont: donts } = disasterPrecautions[disasterType];
+    const isActive = selectedDisaster === disasterType;
 
-    const { do: dos, dont: donts } = disasterPrecautions[selectedDisaster];
-
-    return (<div>
-        <div className={`precautions ${selectedDisaster ? 'active' : ''}`}>
-        <h2>{`${selectedDisaster.charAt(0).toUpperCase()}${selectedDisaster.slice(1)}Precautions`}</h2>
-        <p>Do:</p>
-        <ul>
-          {dos.map((action, index) => (
-            <li key={index}>{action}</li>
-          ))}
-        </ul>
-        <p>Don't:</p>
-        <ul>
-          {donts.map((action, index) => (
-            <li key={index}>{action}</li>
-          ))}
-        </ul>
+    return (
+      <div className={`accordion-item ${isActive ? 'active' : ''}`} key={disasterType}>
+        <button className="accordion-button" onClick={() => handleButtonClick(disasterType)}>
+          {disasterType.charAt(0).toUpperCase() + disasterType.slice(1)}
+        </button>
+        {isActive && (
+          <div className="panel">
+            <ul>
+              <li><strong>Do:</strong></li>
+              {dos.map((doItem, index) => <li key={index}>{doItem}</li>)}
+              <li><strong>Don't:</strong></li>
+              {donts.map((dontItem, index) => <li key={index}>{dontItem}</li>)}
+            </ul>
+          </div>
+        )}
       </div>
-    </div>
-      
     );
   };
 
   return (
-    <div>
+    <div className="disaster-precautions-container">
       <h1>Disaster Precautions</h1>
-
-      <button onClick={() => handleButtonClick('cyclone')}>Cyclone</button>
-      <button onClick={() => handleButtonClick('earthquake')}>Earthquake</button>
-      <button onClick={() => handleButtonClick('flood')}>Flood</button>
-      <button onClick={() => handleButtonClick('wildfire')}>Wildfire</button>
-      <button onClick={() => handleButtonClick('tornado')}>Tornado</button>
-      <button onClick={() => handleButtonClick('tsunami')}>Tsunami</button>
-      <button onClick={() => handleButtonClick('hurricane')}>Hurricane</button>
-
-      {/* Render precautions for the selected disaster */}
-      {renderPrecautions()}
+      <div className="accordion">
+        {Object.keys(disasterPrecautions).map(disasterType =>
+          renderAccordionItem(disasterType)
+        )}
+      </div>
     </div>
   );
 };

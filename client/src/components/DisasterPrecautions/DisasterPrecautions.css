@@ -1,108 +1,99 @@
 /* src/components/DisasterPrecautions.css */
-
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #e6f7ff; /* Light blue background */
-    margin: 0;
-    overflow-x: hidden;
-  }
-  
-  .container {
-    max-width: 800px;
-    margin: 50px auto; /* Improved margins for centering */
-    padding: 40px;
-    background-color: #fff;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
-    overflow: hidden;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.8s forwards;
-  }
-  
-  @keyframes fadeInUp {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  h1 {
-    color: #4285f4; /* Google Blue */
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 2.5rem; /* Adjusted font size */
-    text-decoration: underline; /* Underline text */
-  }
-  
-  .buttons {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  button {
-    margin: 15px;
-    padding: 18px 35px;
-    font-size: 1.2rem; /* Adjusted font size */
-    font-weight: bold;
-    background-color: #4285f4;
-    color: #fff;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: #255ab3;
-  }
-  
-  .precautions {
-    opacity: 0;
-    margin-top: 30px;
-    padding: 25px;
-    background-color: #f9f9f9; /* Light gray background */
-    border: 1px solid #ddd;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: opacity 0.5s ease;
-  }
-  
-  .precautions.active {
-    opacity: 1;
-  }
-  
-  h2 {
-    color: #4285f4;
-    margin-bottom: 20px;
-    font-size: 1.8rem; /* Adjusted font size */
-    text-decoration: underline; /* Underline text */
-  }
-  
-  p {
-    font-weight: bold;
-    font-style: italic; /* Italic text */
-    margin-bottom: 10px;
-    font-size: 1.2rem; /* Adjusted font size */
-  }
-  
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  ul li {
-    margin-bottom: 10px;
-    color: #555;
-    font-weight: bold;
-    font-style: italic; /* Italic text */
-    font-size: 1.2rem; /* Adjusted font size */
-  }
-  
-  /* Page transition animation */
-  .page-exit-active {
-    opacity: 0;
-    transform: translateY(-20px);
-    transition: opacity 0.5s, transform 0.5s;
-  }
+  font-family: 'Roboto', sans-serif;
+  background-color: #e6f7ff; /* Light blue background */
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.disaster-precautions-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #0619b0;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+}
+
+.accordion {
+  list-style-type: none;
+  padding: 0;
+}
+
+.accordion-item {
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.accordion-button {
+  background-color: #0619b0; /* Google Blue */
+  color: #fff; /* White text */
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-button:hover {
+  background-color: #255ab3; /* Darker blue */
+}
+
+.accordion-button:after {
+  content: '\002B'; /* Plus sign */
+  color: #fff; /* White text */
+  float: right;
+  font-size: 1.5rem;
+  margin-left: 5px;
+}
+
+.accordion-button.active:after {
+  content: '\2212'; /* Minus sign */
+}
+
+.panel {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: padding 0.3s ease, max-height 0.3s ease;
+  background-color: #f9f9f9; /* Light gray background */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.panel ul {
+  padding: 20px;
+}
+
+.panel li {
+  margin-bottom: 10px;
+  color: #555;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #0619b0; /* Google Blue */
+  color: #fff; /* White text */
+  margin-top: 30px;
+  border-radius: 0 0 15px 15px;
+}
+.accordion-item.active .panel {
+  max-height: 100vh; /* This should be more than enough to accommodate your content */
+  padding: 20px 18px;
+}
