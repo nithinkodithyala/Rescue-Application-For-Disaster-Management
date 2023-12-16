@@ -15,9 +15,10 @@ import MyCollectionCenter from "./scenes/volunteer/collection/MyCollectionCenter
 import { useEffect } from "react"; // Remove the redundant React import
 import { useDispatch } from "react-redux";
 import { setCollectionCenter, setAdmin, setReliefCenter } from "./store/auth";
-import MapComponent from './components/MapComponents/MapComponents';
+// import MapComponent from './components/MapComponents/MapComponents';
 import MapAndWeather from "./home";
 import DisasterPrecautions from "./components/DisasterPrecautions/DisasterPrecautions";
+import Donate from "./components/Donate/Donate";
 
 function App() {
   axios.defaults.baseURL = "http://localhost:5000";
@@ -49,6 +50,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/do&donts" element={<DisasterPrecautions/>} />
+        <Route path="/Donate" element={<Donate/>} />
 
         <Route path="/admin">
           <Route index element={<AdminLayout />} />

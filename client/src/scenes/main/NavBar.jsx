@@ -39,6 +39,10 @@ const mainNavItems = [
     title: "do's & dont's",
     link: "/do&donts",
   },
+  {
+    title: "Donate",
+    link: "/Donate",
+  },
 ];
 
 const reliefNavItems = [
